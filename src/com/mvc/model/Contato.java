@@ -15,10 +15,12 @@ public class Contato {
 	private String telefone;
 	@Column(name="email", length=64,nullable=false)
 	private String email;
+	
+	public Contato(){
 		
-	public Contato(int id, String nome, String telefone, String email) {
-		super();
-		this.id = id;
+	}
+	
+	public Contato(String nome, String telefone, String email) {
 		this.nome = nome;
 		this.telefone = telefone;
 		this.email = email;
