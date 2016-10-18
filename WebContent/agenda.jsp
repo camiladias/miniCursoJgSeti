@@ -12,7 +12,7 @@
 		Bem vindo a agenda (:
 		
 		<form action="mvc" method="POST">
-			<input type="hidden" value="AdicionaLogica"/>
+			<input type="hidden" value="AdicionaPaginaLogica"/>
 			<input type="submit" value="Listar Todos"/><br/>
 		</form>
 		<form action="mvc" method="POST">

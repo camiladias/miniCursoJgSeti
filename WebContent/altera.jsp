@@ -10,16 +10,14 @@
 		<form action="mvc" method="GET">
 	    
 	    	<!-- Passei o Logica no formulário escondido hihi -->
-		    <input type="hidden" id="logica" name="logica" value="AlteraContatoLogica">
+		    <input type="hidden" id="logica" name="logica" value="AlteraLogica">
 		    
-		    Nome: <input type="text" id="nomeContato" name="nome" value="<%=request.getParameter("nome")%>"/><br />
-		    E-mail: <input type="text" name="email" value="<%=request.getParameter("email")%>"/><br/>
-		    Endereço: <input type="text" name="endereco" value="<%=request.getParameter("endereco")%>"/><br/>  
-		    Data Nascimento: <input type="text" id="dataNascimento" name="dataNascimento" value="<%=request.getParameter("dataNascimento")%>"/><br/>
-		    	<script>$("#dataNascimento").datepicker();</script>
+		    Nome: <input type="text" id="nomeContato" name="nome" value="${contato.nome}"/><br />
+		    Telefone: <input type="text" name="telefone" value="${contato.telefone}"/><br/>
+		    Email: <input type="text" name="email" value="${contato.email}"/><br/>  
 		    
 		    <!-- Passei o ID escondido também heuheuheheu -->
-		    <input  type="hidden" id="id" name="id" value="<%=request.getParameter("id") %>"/>
+		    <input  type="hidden" id="id" name="id" value="${contato.id}"/>
 		      
      		<input type="submit" value="Alterar" />
 	      

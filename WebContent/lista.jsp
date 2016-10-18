@@ -16,9 +16,8 @@
 		  <c:forEach var="contato" items="${dao.lista}">
 		    <tr>
 		      <td>${contato.nome}</td>
+		      <td>${contato.telefone}</td>
 		      <td>${contato.email}</td>
-		      <td>${contato.endereco}</td>
-		      <td>${contato.dataNascimento.time}</td>
 		      <td>
 		      	<form action="mvc" method="POST">
 		      		<input type="hidden" value="AlteraPaginaLogica"/>
