@@ -15,7 +15,7 @@ public class ListaLogica extends HttpServlet implements Logica{
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		//Monta a lista de contatos, literalmente numa lista objetos do tipo contato haha
-		List<Contato> contatos = (List<Contato>) new ContatoDao().findAll();
+		List<Contato> contatos = ContatoDao.getInstance().findAll();
 		request.setAttribute("contatos",contatos);
 		
 		return "lista.jsp";

@@ -12,11 +12,11 @@
 		Bem vindo a agenda (:
 		
 		<form action="mvc" method="POST">
-			<input type="hidden" value="AdicionaPaginaLogica"/>
+			<input id="logica" name="logica" type="hidden" value="AdicionaPaginaLogica"/>
 			<input type="submit" value="Listar Todos"/><br/>
 		</form>
 		<form action="mvc" method="POST">
-			<input type="hidden" value="ListaLogica"/>
+			<input id="logica"  name="logica" type="hidden" value="ListaLogica"/>
 			<input type="submit" value="Listar Todos"/><br/>
 		</form>
 		
@@ -36,7 +36,7 @@
 		      </td>
 		      <td>
 		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="${contato.id" name="id"/>
+		      		<input type="hidden" value="${contato.id}" name="id"/>
 		      		<input type="hidden" value="AlteraPaginaLogica"/>
 		      		<input type="submit" value="Editar"/>
 		      	</form>

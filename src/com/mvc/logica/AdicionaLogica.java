@@ -12,8 +12,8 @@ public class AdicionaLogica implements Logica{
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
 		Contato contato = new Contato(req.getParameter("nome"),req.getParameter("telefone"),req.getParameter("email"));
 		
-		ContatoDao dao = new ContatoDao();
-		dao.persist(contato);
+		
+		ContatoDao.getInstance().persist(contato);
 		
 		return "agenda.jsp";
 	}

@@ -13,7 +13,7 @@ public class LoginLogica extends HttpServlet implements Logica {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Override
+@Override
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
 
 		if ((req.getParameter("idUsuario").equals("admin")) && (req.getParameter("senhaUsuario").equals("admin"))) {

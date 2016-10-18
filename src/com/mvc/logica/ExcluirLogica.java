@@ -19,8 +19,7 @@ public class ExcluirLogica extends HttpServlet implements Logica{
 			return "erro.jsp";
 		}
 		
-		ContatoDao dao = new ContatoDao();
-		dao.removeById(id);
+		ContatoDao.getInstance().removeById(id);
 		
 		System.out.println("Excluindo contato...");
 		

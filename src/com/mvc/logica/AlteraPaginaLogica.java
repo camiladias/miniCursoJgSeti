@@ -1,7 +1,5 @@
 package com.mvc.logica;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,7 +19,7 @@ public class AlteraPaginaLogica implements Logica{
 			return "erro.jsp";
 		}
 		
-		Contato contato = new ContatoDao().getById(id);		
+		Contato contato = ContatoDao.getInstance().getById(id);		
 		request.setAttribute("contato", contato);
 		
 		return "altera.jsp";

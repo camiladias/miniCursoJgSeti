@@ -10,6 +10,7 @@ public class AlteraLogica implements Logica{
 
 	@Override
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
+		
 		Contato contato = new Contato();
 		
 		contato.setNome(req.getParameter("nome"));
@@ -22,9 +23,8 @@ public class AlteraLogica implements Logica{
 			req.getRequestDispatcher("erro.html").forward(req, res);
 		}
 		
-		ContatoDao dao = new ContatoDao();
 		try{
-			dao.merge(contato);
+			ContatoDao.getInstance().merge(contato);
 		}catch(Exception e){
 			req.getRequestDispatcher("erro.html").forward(req, res);
 		}
