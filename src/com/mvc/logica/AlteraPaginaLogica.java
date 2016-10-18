@@ -11,12 +11,12 @@ public class AlteraPaginaLogica implements Logica{
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		int id = (Integer) null;
+		int id = -1;
 		try{
-			id = Integer.getInteger(request.getParameter("id"));
+			id = Integer.parseInt(request.getParameter("id"));
 			
 		}catch (Exception e) {
-			return "erro.jsp";
+			return "erro.html";
 		}
 		
 		Contato contato = ContatoDao.getInstance().getById(id);		

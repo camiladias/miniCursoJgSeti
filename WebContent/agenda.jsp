@@ -9,48 +9,16 @@
 		<title>Bem vindo ao sistema</title>
 	</head>
 	<body>
-		Bem vindo a agenda (:
+		Bem vindo a agenda (:<br/>
 		
 		<form action="mvc" method="POST">
 			<input id="logica" name="logica" type="hidden" value="AdicionaPaginaLogica"/>
-			<input type="submit" value="Listar Todos"/><br/>
+			<input type="submit" value="Adicionar Contato"/><br/><br/>
 		</form>
 		<form action="mvc" method="POST">
 			<input id="logica"  name="logica" type="hidden" value="ListaLogica"/>
 			<input type="submit" value="Listar Todos"/><br/>
 		</form>
-		
-		<table>
-		  <!-- percorre contatos montando as linhas da tabela -->
-		  <c:forEach var="contato" items="${dao.lista}">
-		    <tr>
-		      <td>${contato.nome}</td>
-		      <td>${contato.email}</td>
-		      <td>${contato.endereco}</td>
-		      <td>${contato.dataNascimento.time}</td>
-		      <td>
-		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="AlteraPaginaLogica"/>
-		      		<input type="submit" value="Editar"/>
-		      	</form>
-		      </td>
-		      <td>
-		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="${contato.id}" name="id"/>
-		      		<input type="hidden" value="AlteraPaginaLogica"/>
-		      		<input type="submit" value="Editar"/>
-		      	</form>
-		      </td>
-		      <td>
-		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="${contato.id}" name="id"/>
-		      		<input type="hidden" value="ExcluirLogica"/>
-		      		<input type="submit" value="Excluir"/>
-		      	</form>
-		      </td>
-		    </tr>
-		  </c:forEach>
-		</table>
 		
 	</body>
 </html>

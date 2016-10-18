@@ -13,17 +13,11 @@
 	
 		<table>
 		  <!-- percorre contatos montando as linhas da tabela -->
-		  <c:forEach var="contato" items="${dao.lista}">
+		  <c:forEach var="contato" items="${contatos}">
 		    <tr>
 		      <td>${contato.nome}</td>
 		      <td>${contato.telefone}</td>
 		      <td>${contato.email}</td>
-		      <td>
-		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="AlteraPaginaLogica"/>
-		      		<input type="submit" value="Editar"/>
-		      	</form>
-		      </td>
 		      <td>
 		      	<form action="mvc" method="POST">
 		      		<input type="hidden" value="${contato.id}" name="id"/>
@@ -33,7 +27,7 @@
 		      </td>
 		      <td>
 		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="${contato.id" name="id"/>
+		      		<input type="hidden" value="${contato.id}" name="id"/>
 		      		<input type="hidden" value="ExcluirLogica" name="logica"/>
 		      		<input type="submit" value="Excluir"/>
 		      	</form>

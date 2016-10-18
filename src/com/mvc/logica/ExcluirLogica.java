@@ -8,22 +8,27 @@ import com.mvc.dao.ContatoDao;
 
 public class ExcluirLogica extends HttpServlet implements Logica{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		int id = (Integer) null;
+		int id = -1;
 		try{
-			id = Integer.getInteger(request.getParameter("id"));
+			id = Integer.parseInt(request.getParameter("id"));
 			
 		}catch (Exception e) {
-			return "erro.jsp";
+			return "erro.html";
 		}
 		
 		ContatoDao.getInstance().removeById(id);
 		
 		System.out.println("Excluindo contato...");
 		
-		return "lista.jsp";
+		return "agenda.jsp";
 	}
 	
 }

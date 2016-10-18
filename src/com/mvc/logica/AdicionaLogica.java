@@ -10,11 +10,12 @@ public class AdicionaLogica implements Logica{
 
 	@Override
 	public String executa(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		Contato contato = new Contato(req.getParameter("nome"),req.getParameter("telefone"),req.getParameter("email"));
 		
+		Contato contato = new Contato(req.getParameter("nome"),req.getParameter("telefone"),req.getParameter("email"));
 		
 		ContatoDao.getInstance().persist(contato);
 		
 		return "agenda.jsp";
+		
 	}
 }

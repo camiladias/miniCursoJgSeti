@@ -29,7 +29,7 @@ public class AlteraLogica implements Logica{
 			req.getRequestDispatcher("erro.html").forward(req, res);
 		}
 		
-		return "lista.jsp";
+		return "agenda.jsp";
 	}
 
 }
