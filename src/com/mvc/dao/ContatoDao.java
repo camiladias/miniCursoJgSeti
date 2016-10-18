@@ -11,7 +11,7 @@ public class ContatoDao {
 	private static ContatoDao instance;
 	protected EntityManager entityManager;
 
-	private ContatoDao() {
+	public ContatoDao() {
 		entityManager = getEntityManager();
 	}
 

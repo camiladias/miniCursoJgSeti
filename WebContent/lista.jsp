@@ -10,16 +10,7 @@
 	</head>
 	<body>
 		Bem vindo a agenda (:
-		
-		<form action="mvc" method="POST">
-			<input type="hidden" value="AdicionaLogica"/>
-			<input type="submit" value="Listar Todos"/><br/>
-		</form>
-		<form action="mvc" method="POST">
-			<input type="hidden" value="ListaLogica"/>
-			<input type="submit" value="Listar Todos"/><br/>
-		</form>
-		
+	
 		<table>
 		  <!-- percorre contatos montando as linhas da tabela -->
 		  <c:forEach var="contato" items="${dao.lista}">
@@ -36,15 +27,15 @@
 		      </td>
 		      <td>
 		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="${contato.id" name="id"/>
-		      		<input type="hidden" value="AlteraPaginaLogica"/>
+		      		<input type="hidden" value="${contato.id}" name="id"/>
+		      		<input type="hidden" value="AlteraPaginaLogica" name="logica"/>
 		      		<input type="submit" value="Editar"/>
 		      	</form>
 		      </td>
 		      <td>
 		      	<form action="mvc" method="POST">
-		      		<input type="hidden" value="${contato.id}" name="id"/>
-		      		<input type="hidden" value="ExcluirLogica"/>
+		      		<input type="hidden" value="${contato.id" name="id"/>
+		      		<input type="hidden" value="ExcluirLogica" name="logica"/>
 		      		<input type="submit" value="Excluir"/>
 		      	</form>
 		      </td>

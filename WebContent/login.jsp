@@ -13,8 +13,8 @@
 		<form action="mvc" method="POST">
 		
 			<input type="hidden" value="LoginLogica" name="logica" id ="logica"/>
-			<input type="text" name="idUsuario" id="idUsuario"/><br/>
-			<input type="password" name="senhaUsuario" id="senhaUsuario"/><br/>
+			Login:<input type="text" name="idUsuario" id="idUsuario"/><br/>
+			Senha:<input type="password" name="senhaUsuario" id="senhaUsuario"/><br/>
 			
 			<input type="submit" value="Login"/> 
 		
