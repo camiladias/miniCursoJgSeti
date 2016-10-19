@@ -1,11 +1,14 @@
 package com.mvc.logica;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 public class LoginLogica implements Logica {
+=======
+public class LoginLogica extends HttpServlet implements Logica {
+>>>>>>> 4340cb3c36b491fc46b82e624fa74526fca55786
 
 	/**
 	 * 

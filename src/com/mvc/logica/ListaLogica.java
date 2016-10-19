@@ -11,9 +11,6 @@ import com.mvc.model.Contato;
 
 public class ListaLogica extends HttpServlet implements Logica{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Override

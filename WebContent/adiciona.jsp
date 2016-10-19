@@ -7,6 +7,7 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
+		<!-- action é quem vai receber a requisição -->
 		<form action="mvc" method="GET">
 	    
 	    	<!-- Passei o Logica no formulário escondido hihi -->
