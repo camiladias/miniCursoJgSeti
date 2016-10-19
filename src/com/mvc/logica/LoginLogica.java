@@ -5,8 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/LoginLogica")
-public class LoginLogica extends HttpServlet implements Logica {
+public class LoginLogica implements Logica {
 
 	/**
 	 * 
