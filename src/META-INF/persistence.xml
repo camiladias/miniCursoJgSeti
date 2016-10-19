@@ -4,6 +4,7 @@
      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
     version="2.0">
 
+<!-- unidade de persistencia guarda configurações do banco de dados e as classes mapeadas -->
  <persistence-unit name="agenda">
 
    <!-- entidade mapeada -->

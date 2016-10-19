@@ -11,10 +11,22 @@ public class ContatoDao {
 	private static ContatoDao instance;
 	protected EntityManager entityManager;
 
+	//contrustor sempre vai chamar o getEntityManager()
 	public ContatoDao() {
 		entityManager = getEntityManager();
 	}
+	
+	/*getEntityManager() é responsável por criar uma instância de EntityManager.*/
+	private EntityManager getEntityManager() {
+		//agenda é a persistence-unit do persistence.xml, com as configurações do banco
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("agenda");
+		if (entityManager == null) {
+			entityManager = factory.createEntityManager(); //esse metodo só pode rodar uma vez, não pode haver dois EntityManager ao mesmo tempo 
+		}
+		return entityManager;
+	}
 
+	//garante que somente uma instancia do EntityManager esteja ativa pra uma persistence-unit 
 	public static ContatoDao getInstance(){
 		if (instance == null){
 			instance = new ContatoDao();
@@ -22,15 +34,7 @@ public class ContatoDao {
 		return instance;
 	}
 	
-	/*getEntityManager() é responsável por criar uma instância de EntityManager.*/
-	private EntityManager getEntityManager() {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("agenda");
-		if (entityManager == null) {
-			entityManager = factory.createEntityManager();
-		}
-		return entityManager;
-	}
-	
+		
 	/*find() chamado do EntityManager passando o tipo da classe o id que deve ser buscado, já traz um objeto*/
 	public Contato getById(final int id) {
 		return entityManager.find(Contato.class, id);

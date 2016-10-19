@@ -8,15 +8,14 @@ import com.mvc.dao.ContatoDao;
 
 public class ExcluirLogica extends HttpServlet implements Logica{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		int id = -1;
+		
+		//pega o id informado no post do formulário e transforma em inteiro
 		try{
 			id = Integer.parseInt(request.getParameter("id"));
 			
@@ -24,6 +23,7 @@ public class ExcluirLogica extends HttpServlet implements Logica{
 			return "erro.html";
 		}
 		
+		//chamando método do banco de dados para remover pelo id
 		ContatoDao.getInstance().removeById(id);
 		
 		System.out.println("Excluindo contato...");

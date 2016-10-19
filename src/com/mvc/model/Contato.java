@@ -1,4 +1,5 @@
 package com.mvc.model;
+
 import javax.persistence.*;
 
 @Entity

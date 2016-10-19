@@ -13,6 +13,8 @@ public class AdicionaLogica implements Logica{
 		
 		Contato contato = new Contato(req.getParameter("nome"),req.getParameter("telefone"),req.getParameter("email"));
 		
+		//chamando método do banco de dados para salvar o objeto
+		//somente uma instância roda pois apenas uma seção no banco pode estar aberta
 		ContatoDao.getInstance().persist(contato);
 		
 		return "agenda.jsp";
